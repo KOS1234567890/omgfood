@@ -1,8 +1,9 @@
 const staticCacheName = "version-1"
 const urlsToCache = [
-    "omgfood/public/index.html",
-    'omgfood/public/static/js/bundle.js',
-    'omgfood/public/manifest.json'
+    '/omgfood',
+    "/omgfood/index.html",
+    '/omgfood/static/js/bundle.js',
+    '/omgfood/manifest.json'
 ]
 
 const dynamicCache = "dynamicCache";
