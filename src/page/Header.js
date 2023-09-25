@@ -12,9 +12,9 @@ import Search from './Search';
     <>
         <header>
             <div className='menubar'>
-                <a href='/'><img src={logo} alt='OMG Logo'/></a>
+                <a href='/omgfood'><img src={logo} alt='OMG Logo'/></a>
                 <div className='menu_right'>
-                  <a href='/'><img src={hm} alt='OMG home' id='home_ic'/></a>
+                  <a href='/omgfood'><img src={hm} alt='OMG home' id='home_ic'/></a>
                   <Link to='/RandomFood'><img src={rc} alt='OMG recipes' id='recipes_ic'/></Link>
                   <Link to='/CountryRecipeList'><img src={earth} alt='OMG Earth' id='earth_ic'/></Link>
                 </div>
