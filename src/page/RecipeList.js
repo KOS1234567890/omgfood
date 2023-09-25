@@ -10,7 +10,14 @@ import MexicanFoodData from '../JSON/Mexican_Food.json';
 import FrenchFoodData from '../JSON/French_Food.json';
 import SpanishFoodData from '../JSON/Spanish_Food.json';
 import GreekFoodData from '../JSON/Greek_Food.json';
+// Import Swiper React components
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation } from 'swiper/modules';
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/navigation';
 
+// import required modules
 const cuisines = [
   {
     name: '한식',
@@ -95,7 +102,20 @@ function RecipeList() {
     <div className='Recipe_list'>
       <h4>대표 나라별 레시피</h4>
       <div className="cuisine-images">
+      <Swiper
+                slidesPerView={2}
+                centeredSlides={true}
+                spaceBetween={16}
+                navigation={true}
+                modules={[ Navigation]}
+                pagination={{
+                  clickable: true,
+                }}
+                className="mySwiper"
+              >
+                
         {cuisines.map((cuisine) => (
+          <SwiperSlide>
           <div className={`con_food${selectedCuisine === cuisine ? 'cuisine-image-large' : ''}`} key={cuisine.name}>
             <img
                     src={cuisine.image}
@@ -105,7 +125,9 @@ function RecipeList() {
             <b>{cuisine.name} 음식 목록</b>
             {selectedCuisine === cuisine && cuisine.recipes && ( // 선택된 음식일 때만 표시
             <ul>
+              
               {cuisine.recipes.map((food) => (
+                
                 <li className='foodlist' key={food.id}>
                   <img src={`https://spoonacular.com/recipeImages/${food.image}`} alt={food.title} className='foodimg' onClick={() => handleRecipeClick(food.id)}/>
                   <h3>{food.title}</h3>
@@ -113,10 +135,14 @@ function RecipeList() {
                   <p>Ready in Minutes: {food.readyInMinutes}</p>
                 </li>
               ))}
+              
             </ul>
-            )}
+
+)}
           </div>
+          </SwiperSlide>  
         ))}
+        </Swiper>
       </div>
     </div>
     );

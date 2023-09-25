@@ -8,7 +8,7 @@ function Detail() {
     const [recipeDetails, setRecipeDetails] = useState(null);
     const [recipeNutritionWidget, setRecipeNutritionWidget] = useState(null);
     const [recipeEquipmentWidget, setRecipeEquipmentWidget] = useState(null);
-    const [recipeTasteWidget, setRecipeTasteWidget] = useState(null);
+    const [recipeIngredientsWidget, setRecipeIngredientsWidget] = useState(null);
 
     
 
@@ -25,14 +25,15 @@ function Detail() {
           axios.get(`https://api.spoonacular.com/recipes/${recipeId}/nutritionWidget?defaultCss=True&apiKey=4c38a3a9e2c64aa0a7f2cdd04e22a860`),
           // 필요한 장비
           axios.get(`https://api.spoonacular.com/recipes/${recipeId}/equipmentWidget?defaultCss=True&apiKey=4a799b85e9ea49c59fa9e2523778e512`),
-          //맛에 평가
+          //성분 분석
+          axios.get(`https://api.spoonacular.com/recipes/${recipeId}/ingredientWidget?defaultCss=True&measure=metric&apiKey=4a799b85e9ea49c59fa9e2523778e512`),
         ])
         .then(axios.spread((response1,response2,response3,response4) => {
           setRecipeDetails(response1.data);
           console.log(response4);
           setRecipeNutritionWidget(response2);
           setRecipeEquipmentWidget(response3);
-          setRecipeTasteWidget(response4);
+          setRecipeIngredientsWidget(response4);
         }))
         .catch((error) => {
           console.error(error);
@@ -63,10 +64,15 @@ function Detail() {
                     <h4>필요 장비</h4>
                     <div dangerouslySetInnerHTML={{ __html: recipeEquipmentWidget.data}} />
                   </div>
+                  <div className='Ingredients'>
+                    <h4>필요 재료</h4>
+                    <div dangerouslySetInnerHTML={{ __html: recipeIngredientsWidget.data }} />
+                  </div>
                   <div className='Cooking'>
                     <h4>요리 방법</h4>
                     <div dangerouslySetInnerHTML={{ __html: recipeDetails.instructions }} />
                   </div>
+                  
 
                 </div>
             ) : (

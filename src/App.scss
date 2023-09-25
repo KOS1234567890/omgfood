@@ -21,7 +21,7 @@ body{
       background-color: white;
       margin: 0 auto;
       color: black;
-      width: 768px;
+      max-width: 768px;
       header{
         width: 80%;
         margin: 0 auto;
@@ -250,6 +250,7 @@ body{
       display: flex;
       align-items: center;
       flex-direction: column;
+      transition: 1s;
       gap: 1rem;
       
       overflow: hidden;
@@ -258,8 +259,8 @@ body{
         img{
           transform-origin:top;
           transition: transform 0.3s ease-in-out;
-          width: 200px;
-          height: 133.33px;
+          width: 80%;//200px
+          height: 100%;//133.33px
           cursor: pointer;
         }
         b{
@@ -268,6 +269,7 @@ body{
         }
       
     }
+    
   }
   .Personal-cuisine{
     display: flex;
@@ -312,10 +314,23 @@ body{
     width: 100%;
   }
 }
+.con_foodcuisine-image-large{ //커질때
+  transform: translateX(-27%);
+  width: 227%;
+  display: flex;
+  flex-direction: column;
+  transition: 1s;
+  img{
+    width: 50%;
+    height: 100%;
+    margin: 0 auto;
+  }
+}
 .cuisine-image-large {
   
   width: 100%;
-  transform: scale(1.1); /* 이미지가 클릭 시 110% 크기로 확대됩니다. */
+  transform: scale(0); /* 이미지가 클릭 시 110% 크기로 확대됩니다. */
+  transform-origin : 0 0
    /* 트랜지션 효과 설정 */
   img{
     width: 100%;
@@ -397,5 +412,74 @@ body{
   @keyframes rotateimg{
     0%{transform: translate(0, 0);}
     100%{transform: translate(15rem,15rem);}
+  }
+}
+@media (max-width:450px){
+  .Recipe_list{
+    ul{
+      display: block;
+      li{
+        width: 99%;
+        margin: 0;
+        border :0px;
+        border-bottom: 1px black solid;
+        margin-bottom: 1rem;
+      }
+    }
+  }
+}
+
+.Recipe_list1{
+  text-align: center;
+  width: 90%;
+  margin: 0 auto;
+  h3{
+
+  }
+  .cuisine-images1{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    width: 100%;
+    gap: 1rem;
+    justify-content: center;
+    .con_food1{
+      width:30%;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      gap: 1rem;
+      
+      overflow: hidden;
+      position: relative;
+      
+        img{
+          transform-origin:top;
+          transition: transform 0.3s ease-in-out;
+          width: 80%;//200px
+          height: 100%;//133.33px
+          cursor: pointer;
+        }
+        b{
+          font-size: 1rem;
+          padding-bottom: 1rem;
+        }
+      
+    }
+    .con_food1cuisine-image-large{
+      ul{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 0 3rem;
+        gap: 1rem;
+        .foodlist{
+          width: 30%;
+          border: 1px solid black;
+          p{margin: 0;}
+        }
+      }
+    }
   }
 }

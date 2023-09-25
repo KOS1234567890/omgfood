@@ -96,11 +96,11 @@ function RecipeList() {
       <main>
         <div className='main-containner'>
           <Header/>
-        <div className='Recipe_list'>
+        <div className='Recipe_list1'>
           <h4>대표 나라별 레시피</h4>
-          <div className="cuisine-images Personal-cuisine">
+          <div className="cuisine-images1 Personal-cuisine">
             {cuisines.map((cuisine) => (
-              <div className={`con_food${selectedCuisine === cuisine ? 'cuisine-image-large' : ''}`} key={cuisine.name}>
+              <div className={`con_food1${selectedCuisine === cuisine ? 'cuisine-image-large' : ''}`} key={cuisine.name}>
                 <img
                         src={cuisine.image}
                         alt={cuisine.name}
