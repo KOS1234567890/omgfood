@@ -11,7 +11,7 @@ function App() {
   
 
   return (
-    <HashRouter basename='/'>
+    <BrowserRouter basename='/omgfood'>
       <Link to = "/"></Link>
       <Link to = "/RandomFood"></Link>
       <Link to = "/Detail"></Link>
@@ -24,7 +24,7 @@ function App() {
           <Route path='/Detail/:recipeId'element={<Detail/>}/>
         </Routes>
       </Item>
-    </HashRouter>
+    </BrowserRouter>
   );
 }
 
