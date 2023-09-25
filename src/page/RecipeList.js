@@ -114,8 +114,8 @@ function RecipeList() {
                 className="mySwiper"
               >
                 
-        {cuisines.map((cuisine) => (
-          <SwiperSlide>
+        {cuisines.map((cuisine,k) => (
+          <SwiperSlide key={k}>
           <div className={`con_food${selectedCuisine === cuisine ? 'cuisine-image-large' : ''}`} key={cuisine.name}>
             <img
                     src={cuisine.image}

@@ -3,27 +3,27 @@
   "name": "Oh My God food",
   "icons": [
     {
-      "src": "/icons/favicon.ico",
+      "src": "/omgfood/omgfood/icons/favicon.ico",
       "sizes": "64x64",
       "type": "image/x-icon"
     },
     {
-      "src": "/icons/favicon-16x16.png",
+      "src": "/omgfood/icons/favicon-16x16.png",
       "type": "image/png",
       "sizes": "16x16"
     },
     {
-      "src": "/icons/favicon-32x32.png",
+      "src": "/omgfood/icons/favicon-32x32.png",
       "type": "image/png",
       "sizes": "32x32"
     },
     {
-      "src": "/icons/favicon-96x96.png",
+      "src": "/omgfood/icons/favicon-96x96.png",
       "type": "image/png",
       "sizes": "96x96"
     },
     {
-      "src": "/icons/favicon-196x196.png",
+      "src": "/omgfood/icons/favicon-196x196.png",
       "type": "image/png",
       "sizes": "196x196"
     }

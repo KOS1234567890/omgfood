@@ -41,7 +41,7 @@ function RandomFood() {
             
             <div className='random-img-up Imglist'>
               {randomFood.map((item, index) => (
-                  <p className='main_swiper_contents main_swipercontents' onClick={() => handleRecipeClick(item.id)}>
+                  <div className='main_swiper_contents main_swipercontents' onClick={() => handleRecipeClick(item.id)} key={index}>
                     <img src={item.image} alt={`Random Food ${index}`} />
                     <div className='rit'>
                       <b> 
@@ -51,7 +51,7 @@ function RandomFood() {
                         {item.readyInMinutes}min
                       </p>
                     </div>
-                  </p>
+                  </div>
               ))}
             </div>
           </div>

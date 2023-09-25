@@ -67,7 +67,7 @@ function Search() {
             <div className='main-contents'>
                 {searchFoodResults.map((a,index)=>(
                     
-                    <SwiperSlide>
+                    <SwiperSlide key={index}>
                         <div className='main-food' key={index} >
                             <div className='dududungjang'>{random09==0 ? '더이상 제공해줄 정보는 없다' : '' }</div> 
                             <h2>{a.name}</h2>

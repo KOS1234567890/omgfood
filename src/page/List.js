@@ -47,7 +47,7 @@ function List() {
           <div className='random-img-up'>
             {randomFood.map((item, index) => (
               <SwiperSlide key={item.id}>
-                <p className='main_swiper_contents' onClick={() => handleRecipeClick(item.id)}>
+                <div className='main_swiper_contents' onClick={() => handleRecipeClick(item.id)}>
                   <img src={item.image} alt={`Random Food ${index}`} />
                   <div className='Random-img-txt'>
                     <b> 
@@ -57,7 +57,7 @@ function List() {
                       {item.readyInMinutes}min
                     </p>
                   </div>
-                </p>
+                </div>
               </SwiperSlide>
             ))}
           </div>
