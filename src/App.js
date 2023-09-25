@@ -1,6 +1,6 @@
 import './App.scss';
 import React, { useState } from 'react';
-import {HashRouter,Routes, Route, Link} from 'react-router-dom'
+import {HashRouter,Routes, Route, Link, BrowserRouter} from 'react-router-dom'
 import Home from './page/Home';
 import Item from './page/Item';
 import Detail from './page/Detail';
@@ -11,7 +11,7 @@ function App() {
   
 
   return (
-    <HashRouter>
+    <HashRouter basename='/'>
       <Link to = "/"></Link>
       <Link to = "/RandomFood"></Link>
       <Link to = "/Detail"></Link>
