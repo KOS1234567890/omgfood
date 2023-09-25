@@ -12,7 +12,7 @@ function App() {
 
   return (
     <BrowserRouter basename='/omgfood'>
-      <Link to = "/omgfood"></Link>
+      <Link to = "/"></Link>
       <Link to = "/RandomFood"></Link>
       <Link to = "/Detail"></Link>
       <Item>
