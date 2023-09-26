@@ -8,6 +8,8 @@ const urlsToCache = [
 
 const dynamicCache = "dynamicCache";
 
+console.log(`dynamicCache`);
+
 const limitCacheSize = (name, size)=>{
     caches.open(name).then(cache=>{
         cache.keys().then(keys=>{
@@ -19,6 +21,9 @@ const limitCacheSize = (name, size)=>{
 }
 
 this.addEventListener('install', (event)=>{
+
+    console.log(`install`);
+    //기다리는 메소드 이벤트가 처리되는동안 다른것들이 처리 할수 없지만 ...
     event.waitUntil(
         caches.open(staticCacheName).then((cache)=>{
             console.log('Opend Cache')
@@ -28,6 +33,7 @@ this.addEventListener('install', (event)=>{
 })
 
 this.addEventListener('fetch', event => {
+    console.log(`fetch`);
     event.respondWith(
         caches.match(event.request).then(cacheRes=>{
             return cacheRes || fetch(event.request).then(fetchRes=>{
@@ -46,7 +52,9 @@ this.addEventListener('fetch', event => {
 })
 
 this.addEventListener('activate', event=>{
-    event.waitUntil(
+    console.log('activate');
+    //
+    event.waitUntil(                                        
         caches.keys().then(keys => {
             return Promise.all(keys
                 .filter(key=> key !== staticCacheName)
