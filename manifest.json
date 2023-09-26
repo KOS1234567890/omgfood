@@ -1,10 +1,17 @@
 {
   "short_name": "OMGfood",
   "name": "Oh My God food",
+  "description": "Recipes for food from around the world are gathered here! A site for those who are curious about recipes!",
+  "display_override": "standalone",
+  "edge_side_panel": "edge",
+  "handle_links": true,
+  "launch_handler": "/launch",
+  "orientation": "portrait",
+  "screenshots": [],
   "icons": [
     {
       "src": "/omgfood/omgfood/icons/favicon.ico",
-      "sizes": "64x64",
+      "sizes": "48x48",
       "type": "image/x-icon"
     },
     {
@@ -18,9 +25,9 @@
       "sizes": "32x32"
     },
     {
-      "src": "/omgfood/icons/favicon-96x96.png",
+      "src": "/omgfood/icons/android-chrome-192x192.png",
       "type": "image/png",
-      "sizes": "96x96"
+      "sizes": "192x192"
     },
     {
       "src": "/omgfood/icons/favicon-196x196.png",
