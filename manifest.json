@@ -26,6 +26,11 @@
       "src": "/omgfood/icons/favicon-196x196.png",
       "type": "image/png",
       "sizes": "196x196"
+    },
+    {
+      "src": "/omgfood/icons/android-chrome-512x512.png",
+      "type": "image/png",
+      "sizes": "512x512"
     }
   ],
   "start_url": ".",
