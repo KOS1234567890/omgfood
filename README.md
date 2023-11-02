@@ -60,13 +60,13 @@ function Detail() {
       axios
         .all([
           //레시피상세정보
-          axios.get(`https://api.spoonacular.com/recipes/${recipeId}/information?apiKey=e75a0c51a42b41b9b9a0c7f845048434`),
+          axios.get(`https://api.spoonacular.com/recipes/${recipeId}/information?apiKey=${process.env.API_KEY1}`),
           //영양분석 시각화
-          axios.get(`https://api.spoonacular.com/recipes/${recipeId}/nutritionWidget?defaultCss=True&apiKey=4c38a3a9e2c64aa0a7f2cdd04e22a860`),
+          axios.get(`https://api.spoonacular.com/recipes/${recipeId}/nutritionWidget?defaultCss=True&apiKey=${process.env.API_KEY2}`),
           // 필요한 장비
-          axios.get(`https://api.spoonacular.com/recipes/${recipeId}/equipmentWidget?defaultCss=True&apiKey=4a799b85e9ea49c59fa9e2523778e512`),
+          axios.get(`https://api.spoonacular.com/recipes/${recipeId}/equipmentWidget?defaultCss=True&apiKey=${process.env.API_KEY3}`),
           //성분 분석
-          axios.get(`https://api.spoonacular.com/recipes/${recipeId}/ingredientWidget?defaultCss=True&measure=metric&apiKey=4a799b85e9ea49c59fa9e2523778e512`),
+          axios.get(`https://api.spoonacular.com/recipes/${recipeId}/ingredientWidget?defaultCss=True&measure=metric&apiKey=${process.env.API_KEY4}`),
         ])
         .then(axios.spread((response1,response2,response3,response4) => {
           setRecipeDetails(response1.data);
