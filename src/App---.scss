@@ -146,9 +146,6 @@ body{
                     position: relative;
                     mask-image: linear-gradient(90deg, rgba(0, 0, 0, 0.3) 50%, rgba(0, 0, 0, 0.5) 50%);
                   }
-                  img:hover{
-                    transform: scale(103%);
-                  }
                   .Random-img-txt{
                     b{font-size: 1rem;}
                     p{font-size: 1rem; margin: 0;}
@@ -219,24 +216,24 @@ body{
   cursor: pointer;
   position: relative;
   img{
-    width: 85%;
+    width: 80%;
     border-radius: 2rem;
   }
   .Random-img-txt{
     b{font-size: 1rem;}
     p{font-size: 1rem; margin: 0;}
     color: white;
-    width: 80%;
+    width: 70%;
     bottom: 0;
-    background: linear-gradient(360deg, black, transparent);
-    border-radius: 0 0 2rem 2rem;
-    padding: 2rem 1rem;
+    background-color: rgba(0, 0, 0, 0.199);
+    border-radius: 2rem;
+    padding: 1rem;
     position: absolute; 
   }
 }
 .Recipe_list{
   text-align: center;
-  width: 80%;
+  width: 90%;
   margin: 0 auto;
   h3{
 
@@ -255,12 +252,11 @@ body{
       flex-direction: column;
       transition: 1s;
       gap: 1rem;
+      
       overflow: hidden;
       position: relative;
       
         img{
-          
-          border-radius: 4rem;
           transform-origin:top;
           transition: transform 0.3s ease-in-out;
           width: 80%;//200px
@@ -273,9 +269,7 @@ body{
         }
       
     }
-    .con_food:hover{
-      img{transform: scale(105%);}
-    }
+    
   }
   .Personal-cuisine{
     display: flex;
@@ -286,49 +280,37 @@ body{
 
   }
   ul{
-    width: 93%;
+    width: 100%;
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
     padding: 0;
     justify-content: center;
     li{
-      padding: 1rem;
-      width: 23%;
-      box-shadow: 1px 2px 9px 4px gray;
+      width: 26%;
       font-size: 0.8rem;
       list-style: none;
-      border: 0px solid black;
-      border-radius: 3rem;
+      border: 1px solid black;
       margin: 0.7rem;
-      gap: 1rem;
-      transition: 0.5s;
-    
       a{
         color: black;
         text-decoration: none;
+        img{
+          
+        }
+        b{
+
+        }
       }
-      img{
-        
-      }
-      b{
-      }
-      p{
-        margin: 0rem;
-      }
-    }
-    li:hover{
-      transform: scale(103%);
     }
   }
 }
 .foodlist{
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
   
   .foodimg{
-    border-radius: 2rem;
     width: 100%;
   }
 }
@@ -337,16 +319,8 @@ body{
   width: 227%;
   display: flex;
   flex-direction: column;
-  cursor: pointer;
-  .BigFoodImg{
-    border-radius: 4rem;
-    filter: drop-shadow(5px 5px 5px #000); 
-  }
-  b{
-    margin: 1rem 0;
-  }
+  transition: 1s;
   img{
-    border-radius: 2rem; 
     width: 50%;
     height: 100%;
     margin: 0 auto;
@@ -355,10 +329,10 @@ body{
 .cuisine-image-large {
   
   width: 100%;
+  transform: scale(0); /* 이미지가 클릭 시 110% 크기로 확대됩니다. */
   transform-origin : 0 0
    /* 트랜지션 효과 설정 */
   img{
-    border-radius: 0rem;
     width: 100%;
   }
   ul{
@@ -382,7 +356,7 @@ body{
     
     li{
       
-      border: 0px solid black;
+      border: 1px solid black;
       border-radius: 3rem ;
       overflow: hidden;
       margin-top: 1rem;
@@ -415,9 +389,8 @@ body{
 }
 /* RandomFood css */
 .main_swipercontents{
+  width: 50%;
   border: 0px solid black;
-  margin: 2%;
-  width: 46%;
 }
 .Imglist{
   display: flex;
@@ -441,6 +414,21 @@ body{
     100%{transform: translate(15rem,15rem);}
   }
 }
+@media (max-width:450px){
+  .Recipe_list{
+    ul{
+      display: block;
+      li{
+        width: 99%;
+        margin: 0;
+        border :0px;
+        border-bottom: 1px black solid;
+        margin-bottom: 1rem;
+      }
+    }
+  }
+}
+
 .Recipe_list1{
   text-align: center;
   width: 90%;
@@ -462,7 +450,7 @@ body{
       align-items: center;
       flex-direction: column;
       gap: 1rem;
-      transition: 1s;
+      
       overflow: hidden;
       position: relative;
       
@@ -479,69 +467,19 @@ body{
         }
       
     }
-    .con_food1:hover{
-      transform: scale(105%);
-    }
     .con_food1cuisine-image-large{
-      
       ul{
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-around;
+        justify-content: space-between;
         padding: 0 3rem;
-        gap: 2rem;
+        gap: 1rem;
         .foodlist{
-          padding: 1rem;
-          width: 23%;
-          box-shadow: 1px 2px 9px 4px gray;
-          border: 0px solid black;
-          border-radius: 3rem;
+          width: 30%;
+          border: 1px solid black;
           p{margin: 0;}
-          transition: 1s;
-          cursor: pointer;
-        }
-        .foodlist:hover{
-          transform: scale(103%);
         }
       }
     }
   }
 }
-@media (max-width:450px){
-  .swiper-slide{
-    .main_swiper_contents{
-      .Random-img-txt{
-        width: 75%;
-      }
-    } 
-  }
-    .Recipe_list {
-    ul{
-      display: block;
-      li{
-        width: 80%;
-        margin: 0 auto;
-        border :0px;
-        border-bottom: 1px black solid;
-        margin-bottom: 2rem;
-      }
-    }
-  }
-  .con_food1cuisine-image-large{
-    img{width: 100%;}
-  }
-  .Recipe_list1{
-    gap:1rem;
-    .cuisine-images1{
-      .con_food1cuisine-image-large{
-        ul{
-          .foodlist{
-            gap:1rem;
-            width: 100%;
-          }
-        }
-      } 
-    }
-  } 
-}
-

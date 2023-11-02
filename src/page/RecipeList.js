@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
 import { useNavigate ,Link} from 'react-router-dom';
 import AmericanFoodData from '../JSON/American_Food.json';
 import KoreanFoodData from '../JSON/Korean_Food.json';
@@ -12,10 +11,8 @@ import SpanishFoodData from '../JSON/Spanish_Food.json';
 import GreekFoodData from '../JSON/Greek_Food.json';
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation } from 'swiper/modules';
 // Import Swiper styles
 import 'swiper/css';
-import 'swiper/css/navigation';
 
 // import required modules
 const cuisines = [
@@ -78,7 +75,7 @@ const cuisines = [
 
 function RecipeList() {
     const [selectedCuisine, setSelectedCuisine] = useState(null);
-    const [recipes, setRecipes] = useState([]);
+    const [recipes] = useState([]);
     console.log(recipes)
     const navigate = useNavigate(); // useNavigate 사용
     console.log(selectedCuisine)
@@ -106,11 +103,11 @@ function RecipeList() {
                 slidesPerView={2}
                 centeredSlides={true}
                 spaceBetween={16}
-                navigation={true}
-                modules={[ Navigation]}
-                pagination={{
-                  clickable: true,
-                }}
+                // navigation={true}
+                // modules={[ Navigation]}
+                // pagination={{
+                //   clickable: true,
+                // }}
                 className="mySwiper"
               >
                 
