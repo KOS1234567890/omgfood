@@ -17,7 +17,7 @@ function Search() {
   
     const omgfoodSearch = ()=>{
         axios
-        .get(`https://api.spoonacular.com/food/search?query=${searchFood}&number=${random09}&apiKey=${process.env.API_KEY4npm}`)
+        .get(`https://api.spoonacular.com/food/search?query=${searchFood}&number=${random09}&apiKey=${process.env.API_KEY4}`)
         .then((response)=>{
             setsearchFoodResults(response.data.searchResults[0].results);
         })
