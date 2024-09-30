@@ -10,23 +10,18 @@ function Detail() {
     const [recipeEquipmentWidget, setRecipeEquipmentWidget] = useState(null);
     const [recipeIngredientsWidget, setRecipeIngredientsWidget] = useState(null);
 
-    
-
     useEffect(() => {
       // 레시피 상세 정보를 가져오는 API 요청
-      
-    
-
       axios
         .all([
           //레시피상세정보
-          axios.get(`https://api.spoonacular.com/recipes/${recipeId}/information?apiKey=${process.env.API_KEY1}`),
+          axios.get(`https://api.spoonacular.com/recipes/${recipeId}/information?apiKey=${process.env.REACT_APP_API_KEY1}`),
           //영양분석 시각화
-          axios.get(`https://api.spoonacular.com/recipes/${recipeId}/nutritionWidget?defaultCss=True&apiKey=${process.env.API_KEY2}`),
+          axios.get(`https://api.spoonacular.com/recipes/${recipeId}/nutritionWidget?defaultCss=True&apiKey=${process.env.REACT_APP_API_KEY2}`),
           // 필요한 장비
-          axios.get(`https://api.spoonacular.com/recipes/${recipeId}/equipmentWidget?defaultCss=True&apiKey=${process.env.API_KEY3}`),
+          axios.get(`https://api.spoonacular.com/recipes/${recipeId}/equipmentWidget?defaultCss=True&apiKey=${process.env.REACT_APP_API_KEY3}`),
           //성분 분석
-          axios.get(`https://api.spoonacular.com/recipes/${recipeId}/ingredientWidget?defaultCss=True&measure=metric&apiKey=${process.env.API_KEY4}`),
+          axios.get(`https://api.spoonacular.com/recipes/${recipeId}/ingredientWidget?defaultCss=True&measure=metric&apiKey=${process.env.REACT_APP_API_KEY4}`),
         ])
         .then(axios.spread((response1,response2,response3,response4) => {
           setRecipeDetails(response1.data);
