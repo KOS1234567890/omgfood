@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/omgfood/static/css/main.d1c5ba44.css",
-    "main.js": "/omgfood/static/js/main.6950d9fb.js",
+    "main.css": "/omgfood/static/css/main.17127dcf.css",
+    "main.js": "/omgfood/static/js/main.176f31af.js",
     "static/js/787.599dedde.chunk.js": "/omgfood/static/js/787.599dedde.chunk.js",
     "static/media/food_patern.jpg": "/omgfood/static/media/food_patern.2f252ee9a3cba2736455.jpg",
     "service-worker.js": "/omgfood/service-worker.js",
     "static/media/OMGlogo.png": "/omgfood/static/media/OMGlogo.8c106130034fdf77be96.png",
     "index.html": "/omgfood/index.html",
-    "main.d1c5ba44.css.map": "/omgfood/static/css/main.d1c5ba44.css.map",
-    "main.6950d9fb.js.map": "/omgfood/static/js/main.6950d9fb.js.map",
+    "main.17127dcf.css.map": "/omgfood/static/css/main.17127dcf.css.map",
+    "main.176f31af.js.map": "/omgfood/static/js/main.176f31af.js.map",
     "787.599dedde.chunk.js.map": "/omgfood/static/js/787.599dedde.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d1c5ba44.css",
-    "static/js/main.6950d9fb.js"
+    "static/css/main.17127dcf.css",
+    "static/js/main.176f31af.js"
   ]
 }

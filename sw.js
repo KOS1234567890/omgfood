@@ -1,6 +1,6 @@
 const staticCacheName = "version-1"
 const urlsToCache = [
-    '/',
+    '/omgfood',
     "/omgfood/index.html",
     '/omgfood/static/js/bundle.js',
     '/omgfood/manifest.json'
@@ -39,7 +39,7 @@ this.addEventListener('fetch', event => {
             return cacheRes || fetch(event.request).then(fetchRes=>{
                 return caches.open(dynamicCache).then(cache => {
                     cache.put(event.request.url, fetchRes.clone());
-                    limitCacheSize(dynamicCache,200);
+                    limitCacheSize(dynamicCache,10);
                     return fetchRes;
                 })
             })
