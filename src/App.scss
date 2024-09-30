@@ -10,10 +10,11 @@ h2,h3{
 
 body{
   width: 100%;
-  background: url('./picture/food_patern.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
+
   main{
+    background: url('./picture/food_patern.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
     height: 100%;
     width: 100vw;
     
@@ -248,6 +249,9 @@ body{
     margin: 0 auto;
     width: 101%;
     gap: 2rem;
+    .swiper{
+      overflow:hidden;
+    }
     .con_food{
       flex-shrink: 0;
       display: flex;
